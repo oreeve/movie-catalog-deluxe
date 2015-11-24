@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Movies</title>
+
   </head>
 
   <body>
@@ -22,7 +23,7 @@
 
         <% @movies.each do |movie| %>
         <tr>
-          <td><a href="/movies/<%= movie["title"] %>"><%=movie["title"]%></a></td>
+          <td><a href="/movies/<%= movie["id"] %>"><%=movie["title"]%></a></td>
           <td><%=movie["year"]%></td>
           <td><%=movie["rating"]%></td>
           <td><%=movie["genre"]%></td>
@@ -31,6 +32,6 @@
           <% end %>
       </tbody>
     </table>
-    
+
   </body>
 </html>

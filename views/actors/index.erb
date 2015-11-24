@@ -10,7 +10,7 @@
     <ul>
       <% @actors.each do |actor| %>
         <li>
-          <a href="/actors/<%= actor["name"] %>">
+          <a href="/actors/<%= actor["id"] %>">
             <%=actor["name"]%></a><br>
       </li><br>
       <% end %>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @actor %></title>
+    <title><%= @info.first["name"] %></title>
   </head>
 
   <body>
-    <h1><%= @actor %></h1>
+    <h1><%= @info.first["name"] %></h1>
 
       <% @info.each do |item| %>
-        <b><a href="/movies/<%= item["title"] %>"><%= item["title"] %></a>:</b> <%= item["character"] %><br><br>
+        <b><a href="/movies/<%= item["movie_id"] %>"><%= item["title"] %></a>:</b> <%= item["character"] %><br><br>
       <% end %>
     </ul>
   </body>

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @movie %></title>
+    <title><%= @info1.first["title"] %></title>
   </head>
 
   <body>
-    <h1><%= @movie %></h1>
+    <h1><%= @info1.first["title"] %></h1>
 
-      <b>Year: </b><%=@info.first["year"]%><br><br>
-      <b>Rating: </b><%=@info.first["rating"]%><br><br>
-      <b>Genre: </b><%=@info.first["genre"]%><br><br>
-      <b>Studio: </b><%=@info.first["studio"]%><br><br>
+      <b>Year: </b><%=@info1.first["year"]%><br><br>
+      <b>Rating: </b><%=@info1.first["rating"]%><br><br>
+      <b>Genre: </b><%=@info1.first["genre"]%><br><br>
+      <b>Studio: </b><%=@info1.first["studio"]%><br><br>
       <b>Cast:</b><br><br>
-      <% @info.each do |item| %>
-       <a href="/actors/<%= item["actor"] %>"><%= item["actor"] %></a>: <%= item["character"] %><br><br>
+      <% @info1.each do |item| %>
+       <a href="/actors/<%= item["actor_id"] %>"><%= item["actor"] %></a>: <%= item["character"] %><br><br>
       <% end %>
     </ul>
   </body>
