@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @actor %></title>
+  </head>
+
+  <body>
+    <h1><%= @actor %></h1>
+
+      <% @info.each do |item| %>
+        <b><a href="/movies/<%= item["title"] %>"><%= item["title"] %></a>:</b> <%= item["character"] %><br><br>
+      <% end %>
+    </ul>
+  </body>
+</html>
